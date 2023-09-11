@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ulearning_app/common/utils/app_colors.dart';
 import 'package:ulearning_app/common/widgets/widgets.dart';
-import 'package:ulearning_app/pages/notifier/welcome_notifier.dart';
+
+import 'notifier/welcome_notifier.dart';
 
 class Welcome extends ConsumerWidget {
   Welcome({super.key});
@@ -34,6 +35,7 @@ class Welcome extends ConsumerWidget {
                   children: [
                     // first page
                     appOnboardingPage(
+                      context,
                       _controller,
                       imagePath: "assets/images/reading.png",
                       title: "First See Learning",
@@ -42,6 +44,7 @@ class Welcome extends ConsumerWidget {
                     ),
                     // second page
                     appOnboardingPage(
+                      context,
                       _controller,
                       imagePath: "assets/images/man.png",
                       title: "Connect With Everyone",
@@ -50,6 +53,7 @@ class Welcome extends ConsumerWidget {
                     ),
                     // third page
                     appOnboardingPage(
+                      context,
                       _controller,
                       imagePath: "assets/images/boy.png",
                       title: "Always Fascinated Learning",
